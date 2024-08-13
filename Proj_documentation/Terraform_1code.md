@@ -9,8 +9,8 @@ AWS Secret Access Key [****************aaaa]:
 Default region name [us-east-1]:
 Default output format [None]:
 So in order to generate the above **Access key** and **Secret key**
--->Login to AWS console
--->Go to IAM
+\n -->Login to AWS console
+\n -->Go to IAM
 -->On the left hand side console you can see USERS click on that
 -->Give some name 'terraform_local' click on next
 -->Click on attach policies in the below search bar type ADMIN you will find something like this [AdministratorAccess] and select that and click next
