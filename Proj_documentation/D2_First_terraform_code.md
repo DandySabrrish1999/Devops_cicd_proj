@@ -5,9 +5,9 @@
 
 1\. In order to run the terraform we need to establish the connection between local system and AWS console
 
-`   `1.1) First you run the command
+`1.1) First you run the command
 
-`        `Aws configure
+`Aws configure
 
 AWS Access Key ID [\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*aaaa]:
 
@@ -37,6 +37,7 @@ So in order to generate the above \*\*Access key\*\* and \*\*Secret key\*\*
 
 -->Then there will be Access key id and Secret key generated make sure you save them the best practice is to click on download .csv so it stores the cred's in your local system
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Writing the terraform code to create an EC2 instance**
 
 1\. Provider block is where we give the cloud platform name, name for the project we are working on 
@@ -60,19 +61,19 @@ So the resources required to create a EC2 instance
 
 resource "aws\_instance" "demo-server" {
 
-`  `ami           = "ami-03972092xxxxxxx"
+`ami           = "ami-03972092xxxxxxx"
 
-`  `instance\_type = "t2.micro"
+`instance\_type = "t2.micro"
 
-`  `key\_name      = "devops\_proj\_udemey"
+`key\_name      = "devops\_proj\_udemey"
 
-`  `subnet\_id     = "subnet-08e16549a1b912fb1"
+`subnet\_id     = "subnet-08e16549a1b912fb1"
 
 }
 
 **Encountered Error:**
 
-This error encountered for when I had run the command(Terraform apply)If this error encounters its just your ec2 dosent have a VPC created.So it’s a new rule the aws has released that only specific regions dosent need to mention subnet-id in the terraform script as im working US-east-1 its needs to be specified.
+This error encountered for when I had run the command(Terraform apply)If this error encounters its just your ec2 dosent have a VPC created.So it’s a new rule the aws has released that only specific regions dosent need to mention subnet-id in the terraform script as im working on (US-east-1) it needs to be specified.
 
 Error: creating EC2 Instance: operation error EC2: RunInstances, https response error StatusCode: 400, RequestID: e2cb5f8e-d258-4a92-8e0a-3fb535861db6, 
 
@@ -90,7 +91,7 @@ supported for EC2-Classic and default VPC.
 
 │
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Executing the above terraform Code**
 
