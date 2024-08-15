@@ -65,7 +65,7 @@
 
 5.To run the ansible playbook
 
-ansible_jenkins_master_setup //my ansible playbook name
+- ansible_jenkins_master_setup          //my ansible playbook name
 
 ```
 ansible-playbook -i hosts ansible_jenkins_master_setup.yaml
