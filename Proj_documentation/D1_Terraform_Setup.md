@@ -6,7 +6,7 @@ We should be setting up this
 1. VS Code
 1. AWSCLI
 
-***Install Terraform***
+## Install Terraform
 
 - Download terraform the latest version from ([Download:)](https://developer.hashicorp.com/terraform/downloads)
 - Setup environment variable 
@@ -28,13 +28,13 @@ We should be setting up this
 
 ` `3.2) If it’s not installed properly click on this ([Ref:](https://www.youtube.com/watch?v=Cn6xYf0QJME&ab_channel=AWSMadeEasy))
 
-***Install Visual Studio code***
+## Install Visual Studio code
 
 We use VS code to write the terraform script.
 
 Download vs code latest version from [Download](https://code.visualstudio.com/download) and install it.
 
-***AWS-Cli Installation***
+## AWS-Cli Installation
 
 We use the AWS-CLI in order to connect from the local system to AWS console using CLI (Command line interface). So,we can download the CLI in two from’s one is from the link give below and the other is by running the commands in the powershell which is not a good practice.I recommend to download it and install in the local.
 
