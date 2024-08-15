@@ -52,5 +52,3 @@ chmod 400 devops_proj_udemey.pem
 ansilbe -i hosts all -m ping
 
 ```
-
-apt key:[Link](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html)
