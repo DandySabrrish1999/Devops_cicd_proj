@@ -6,7 +6,7 @@
 1\. In order to run the terraform we need to establish the connection between local system and AWS console
 
 `1.1) First you run the command
-
+```
 `Aws configure
 
 AWS Access Key ID [\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*aaaa]:
@@ -16,7 +16,7 @@ AWS Secret Access Key [\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*aaaa]:
 Default region name [us-east-1]:
 
 Default output format [None]:
-
+```
 So in order to generate the above \*\*Access key\*\* and \*\*Secret key\*\*
 
 -->Login to AWS console
