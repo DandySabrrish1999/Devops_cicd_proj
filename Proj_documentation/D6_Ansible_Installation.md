@@ -15,7 +15,7 @@ sudo apt install ansible
 ```
 cd opt
 vi hosts //to create hosts file
-
+```
 3.jenkins master /Slave script
 ```
 [jenkins-master]
@@ -41,7 +41,7 @@ cat filename //check the content in the file
 cd /home/ubuntu
 ```
 mv ****.pem /opt //now we have to move it to opt directory
-
+```
 6.Now we have to change the permissions for the .pem file
 ```
 chmod 400 devops_proj_udemey.pem
