@@ -1,5 +1,4 @@
-Creating a SG(Security group) attaching it with EC2
-
+**Creating a SG(Security group) attaching it with EC2**
 
 
 1. The below code for creating a default SG group and attaching it to the EC2
@@ -57,8 +56,8 @@ resource "aws_security_group" "dev_proj_sg" {
 •	Security Groups: These act as virtual firewalls for your instances to control inbound and outbound traffic.   They are attached to instances.
 
 Official Documentation:
-•	VPC: Click here
-•	Subnet: Clickhere
-•	IGW: Click here
-•	Route Table: Click here
+•	VPC: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc)
+•	Subnet: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
+•	IGW: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway.html)
+•	Route Table: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table)
 •	
