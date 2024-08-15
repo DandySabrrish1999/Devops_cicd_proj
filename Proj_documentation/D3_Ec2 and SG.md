@@ -6,7 +6,7 @@ Creating a SG(Security group) attaching it with EC2
 
 - Ingree: Which traffic to allow
 - egress: Which traffic to send
-- You can refer to link for more information(Click Here)
+- You can refer to link for more information[Click Here](https://registry.terraform.io/providers/hashicorp/aws/3.34.0/docs/resources/security_group)
 
 
 Code:
