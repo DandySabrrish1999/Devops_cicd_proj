@@ -1,4 +1,4 @@
-#**Creating a SG(Security group) attaching it with EC2**
+#Creating a SG(Security group) attaching it with EC2#
 
 
 1. The below code for creating a default SG group and attaching it to the EC2
