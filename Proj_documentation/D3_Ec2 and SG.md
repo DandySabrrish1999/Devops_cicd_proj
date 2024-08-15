@@ -49,16 +49,18 @@ resource "aws_security_group" "dev_proj_sg" {
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2. 
-•	VPC (Virtual Private Cloud): A Virtual Private Cloud (VPC) is a logically isolated section of the AWS cloud where you can launch AWS resources in a virtual network that you define. It’s like your own private network within AWS, giving you full control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways.
-•	Subnet: It’s the range of IP address available in your VPC.It can be either Public or Priv.
-•	CIDR Block: Defines the range of IP addresses available in your VPC or subnet.
-•	Internet Gateway (IGW): Provides a target in your VPC route tables for internet-routable traffic.
-•	NAT Gateway: Allows instances in a private subnet to connect to the internet or other AWS services, but                        prevents the internet from initiating connections with those instances.
-•	Security Groups: These act as virtual firewalls for your instances to control inbound and outbound traffic.   They are attached to instances.
+-  VPC (Virtual Private Cloud): A Virtual Private Cloud (VPC) is a logically isolated section of the AWS cloud where you can launch AWS resources in a virtual network that you define. It’s like your own private network within AWS, giving you full control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways.
+-  Subnet: It’s the range of IP address available in your VPC.It can be either Public or Priv.
+-  CIDR Block: Defines the range of IP addresses available in your VPC or subnet.
+-  Internet Gateway (IGW): Provides a target in your VPC route tables for internet-routable traffic.
+-  NAT Gateway: Allows instances in a private subnet to connect to the internet or other AWS services, 
+   but prevents the internet from initiating connections with those instances.
+-  Security Groups: These act as virtual firewalls for your instances to control inbound and outbound 
+   traffic.They are attached to instances.
 
-Official Documentation:
-•	VPC: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc)
-•	Subnet: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
-•	IGW: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway.html)
-•	Route Table: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table)
+#Official Documentation:
+-  VPC: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc)
+-  Subnet: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
+-  IGW: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway.html)
+-  Route Table: [Click here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table)
 •	
