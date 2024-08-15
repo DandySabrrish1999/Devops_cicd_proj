@@ -1,4 +1,4 @@
-﻿***Prepare Terraform Environment on Windows***
+# Prepare Terraform Environment on Windows
 
 We should be setting up this 
 
