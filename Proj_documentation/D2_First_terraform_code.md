@@ -1,7 +1,7 @@
-﻿***Running the first terraform code creating EC2 instance*** 
+﻿# Running the first terraform code creating EC2 instance
 
 
-**Establishing the connection between local system and AWS using AWSCLI**
+## Establishing the connection between local system and AWS using AWSCLI
 
 1\. In order to run the terraform we need to establish the connection between local system and AWS console
 
