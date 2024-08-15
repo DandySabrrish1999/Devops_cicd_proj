@@ -2,10 +2,10 @@
 
 
 
--- **apt key**:[Click here](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html)
-## adding repo:[Click here](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html)
+1. **apt key**:[Click here](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html)
+ adding repo:[Click here](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html)
 
--- **openjdk-11-jdk**: Includes the JRE plus additional tools needed for developing Java applications. Install this if you are a Java developer.
+2.**openjdk-11-jdk**: Includes the JRE plus additional tools needed for developing Java applications. Install this if you are a Java developer.
 
 -- **openjdk-11-jre**: Includes only the runtime environment for running Java applications, without the development tools. Install this if you only need to run Java applications.
 
