@@ -16,7 +16,7 @@ sudo apt install ansible
 cd opt
 vi hosts //to create hosts file
 ```
-3.jenkins master /Slave script
+3. jenkins master /Slave script
 ```
 [jenkins-master]
 priv i/p              // I/P of the system
@@ -34,15 +34,15 @@ ansible_ssh_private_key_file=/opt/devops_proj_udemey.pem  //change the key accor
 cat filename //check the content in the file
 ```
 
-4.Now we have to import the .pem file to ansible machine as im using mobaxterm i can direclty drag and drop
+4. Now we have to import the .pem file to ansible machine as im using mobaxterm i can direclty drag and drop
 
-5.Now the .pem file is in the home directory 
+5. Now the .pem file is in the home directory 
 ```
 cd /home/ubuntu
 mv _____.pem /opt      //now we have to move it to opt directory
 ```
 
-6.Now we have to change the permissions for the .pem file
+6. Now we have to change the permissions for the .pem file
 ```
 chmod 400 devops_proj_udemey.pem
 ```
