@@ -61,5 +61,27 @@
       service:
         name: Jenkins
         enabled: yes
+```
 
+5.To run the ansible playbook
+
+ansible_jenkins_master_setup //my ansible playbook name
+
+```
+ansible-playbook -i hosts ansible_jenkins_master_setup.yaml
+```
+
+6. Checking whether its installed or not
+
+- Connect to your jenkins-master server through public i/p of that machine
+- To check jenkins is up and running
+
+```
+service jenkins status
+```
+
+7. Checking it with the Public ip of the jenkins master
+
+```
+publicip:8080  // as jenkins runs on 8080 port
 ```
