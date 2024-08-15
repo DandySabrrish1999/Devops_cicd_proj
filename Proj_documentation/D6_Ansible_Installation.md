@@ -39,9 +39,9 @@ cat filename //check the content in the file
 5.Now the .pem file is in the home directory 
 ```
 cd /home/ubuntu
+mv _____.pem /opt      //now we have to move it to opt directory
 ```
-mv ****.pem /opt //now we have to move it to opt directory
-```
+
 6.Now we have to change the permissions for the .pem file
 ```
 chmod 400 devops_proj_udemey.pem
