@@ -1,16 +1,17 @@
-**Creating a SG(Security group) attaching it with EC2**
+#**Creating a SG(Security group) attaching it with EC2**
 
 
 1. The below code for creating a default SG group and attaching it to the EC2
 
-- Ingree: Which traffic to allow
-- egress: Which traffic to send
-- You can refer to link for more information[Click Here](https://registry.terraform.io/providers/hashicorp/aws/3.34.0/docs/resources/security_group)
+-  Ingree: Which traffic to allow
+-  egress: Which traffic to send
+-  You can refer to link for more information[Click Here](https://registry.terraform.io/providers/hashicorp/aws/3.34.0/docs/resources/security_group)
 
 
 Code:
-provider "aws" {
-  region = "us-east-1"
+```
+    provider "aws" {
+    region = "us-east-1"
 
 }
 
@@ -45,7 +46,7 @@ resource "aws_security_group" "dev_proj_sg" {
     Name = "dev_proj_sg"
   }
 }
-
+```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2. 
 •	VPC (Virtual Private Cloud): A Virtual Private Cloud (VPC) is a logically isolated section of the AWS cloud where you can launch AWS resources in a virtual network that you define. It’s like your own private network within AWS, giving you full control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways.
