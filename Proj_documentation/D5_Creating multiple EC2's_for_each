@@ -1,4 +1,4 @@
-# Creating multiple Machines and Updating the rules 
+#Creating multiple Machines and Updating the rules 
 
 ```
 // Decalring the Cloud provider
@@ -116,7 +116,7 @@ resource "aws_route_table" "dev_proj_rt" {
 resource "aws_route_table_association" "dev_proj_rta_pubsubnet_1" {
   subnet_id      = aws_subnet.dev_proj_pubsubnet_01.id
   route_table_id = aws_route_table.dev_proj_rt.id
-
+```
 
 }
 ```
