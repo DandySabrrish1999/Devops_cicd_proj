@@ -11,7 +11,7 @@ sudo apt install ansible
 
 1. After updating the system and installing ansible
    
-2. in the same  ansible system go to opt directory
+2. In the same  ansible system go to /opt directory
 ```
 cd opt
 vi hosts //to create hosts file
@@ -19,13 +19,13 @@ vi hosts //to create hosts file
 3. jenkins master /Slave script
 ```
 [jenkins-master]
-priv i/p              // I/P of the system
+priv i/p              // I/P of the master system
 [jenkins-master:vars] // we use this variables to declare the user name and password
 ansible_user=ubuntu  // As we are using Ubuntu System,change it according the system you use
 ansible_ssh_private_key_file=/opt/devops_proj_udemey.pem  //change the key accordingly
 
 [jenkins-slave]
-priv i/p
+priv i/p              // I/P of the slave system
 [jenkins-slave:vars]// we use this variables to declare the user name and password
 ansible_user=ubuntu  // As we are using Ubuntu System,change it according the system you use
 ansible_ssh_private_key_file=/opt/devops_proj_udemey.pem  //change the key accordingly
