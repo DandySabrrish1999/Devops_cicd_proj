@@ -47,7 +47,7 @@ mv _____.pem /opt      //now we have to move it to opt directory
 chmod 400 devops_proj_udemey.pem
 ```
 
-7. Now we have to execute the Hosts file
+7. Now we have to execute the Hosts file and test the connection
 ```
 ansilbe -i hosts all -m ping
 
