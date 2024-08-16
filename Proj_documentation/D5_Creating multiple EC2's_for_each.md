@@ -1,16 +1,18 @@
 # Creation of EC2 instance with multiple Machines and Updating the rules 
 # Main code
 
-```
-## Decalring the Cloud provider
+# Decalring the Cloud provider
 
+```
 provider "aws" {
   region = "us-east-1"
 
 }
+```
 
-## Creating EC2
+# Creating EC2
 
+```
 resource "aws_instance" "dev_proj_ec2" {
   ami                    = "ami-0a0e5d9c7acc336f1"
   instance_type          = "t2.small"
@@ -27,10 +29,10 @@ resource "aws_instance" "dev_proj_ec2" {
   }
 
 }
+```
 
-
-// Creating Security Group
-
+# Creating Security Group
+```
 resource "aws_security_group" "dev_proj_sg" {
   name   = "dev_proj_sg"
   vpc_id = aws_vpc.dev_proj_vpc.id
@@ -42,9 +44,10 @@ resource "aws_security_group" "dev_proj_sg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+```
 
-
-  // Jenkins default port 
+# Jenkins default port 
+```
   ingress {
     description = "Jenkins GUI Access"
     from_port   = 8080
@@ -65,8 +68,11 @@ resource "aws_security_group" "dev_proj_sg" {
   }
 }
 
-// Creating VPC
+```
 
+# Creating VPC
+
+```
 resource "aws_vpc" "dev_proj_vpc" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
@@ -75,8 +81,10 @@ resource "aws_vpc" "dev_proj_vpc" {
     Name = "dev_proj_vpc"
   }
 }
+```
 
-// Creating Public subnet
+# Creating Public subnet
+```
 
 resource "aws_subnet" "dev_proj_pubsubnet_01" {
   vpc_id                  = aws_vpc.dev_proj_vpc.id
@@ -88,8 +96,10 @@ resource "aws_subnet" "dev_proj_pubsubnet_01" {
     Name = "dev_proj_pubsubnet_01"
   }
 }
+```
 
-// Creating IGW
+# Creating IGW
+```
 
 resource "aws_internet_gateway" "dev_proj_igw" {
   vpc_id = aws_vpc.dev_proj_vpc.id
@@ -99,7 +109,11 @@ resource "aws_internet_gateway" "dev_proj_igw" {
   }
 }
 
-// Creating Route table
+```
+
+# Creating Route table
+
+```
 
 resource "aws_route_table" "dev_proj_rt" {
   vpc_id = aws_vpc.dev_proj_vpc.id
@@ -113,8 +127,10 @@ resource "aws_route_table" "dev_proj_rt" {
     Name = "dev_proj_rt"
   }
 }
+```
 
-// Route Table assosciation
+# Route Table assosciation
+```
 resource "aws_route_table_association" "dev_proj_rta_pubsubnet_1" {
   subnet_id      = aws_subnet.dev_proj_pubsubnet_01.id
   route_table_id = aws_route_table.dev_proj_rt.id
