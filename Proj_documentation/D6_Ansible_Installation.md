@@ -13,7 +13,7 @@ sudo apt install ansible
    
 2. In the same  ansible system go to /opt directory
 ```
-cd opt
+cd /opt
 vi hosts //to create hosts file
 ```
 3. jenkins master /Slave script
