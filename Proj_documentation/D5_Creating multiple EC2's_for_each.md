@@ -2,14 +2,14 @@
 # Main code
 
 ```
-// Decalring the Cloud provider
+## Decalring the Cloud provider
 
 provider "aws" {
   region = "us-east-1"
 
 }
 
-// Creating EC2
+## Creating EC2
 
 resource "aws_instance" "dev_proj_ec2" {
   ami                    = "ami-0a0e5d9c7acc336f1"
