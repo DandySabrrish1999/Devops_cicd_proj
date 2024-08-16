@@ -1,4 +1,5 @@
-# Creating multiple Machines and Updating the rules 
+# Creation of EC2 instance with multiple Machines and Updating the rules 
+# Main code
 
 ```
 // Decalring the Cloud provider
