@@ -31,7 +31,7 @@ resource "aws_instance" "dev_proj_ec2" {
 }
 ```
 
-# Creating Security Group
+# Creating Security Group with inbound and outbound rules
 ```
 resource "aws_security_group" "dev_proj_sg" {
   name   = "dev_proj_sg"
