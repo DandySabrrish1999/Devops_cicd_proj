@@ -20,6 +20,7 @@ resource "aws_instance" "dev_proj_ec2" {
 
   //We use for_each to create 3 systems mentioned below,by using for_each 
   // you can create how many systems you need/ requirement
+
   for_each = toset(["Jenkins_master", "Jenkins_slave", "Ansible"])
   tags = {
     Name = "${each.key}"
