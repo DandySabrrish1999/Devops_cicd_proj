@@ -1,5 +1,7 @@
 # Configuring the the Ansible playbook
 
+**Yaml Syntax Checker**:[Click here](https://www.yamllint.com/)
+
 1.**Jenkins Debian Packages**:[Click Here](https://pkg.jenkins.io/debian-stable/)
 
 1.**Apt key**:[Click here](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html)
