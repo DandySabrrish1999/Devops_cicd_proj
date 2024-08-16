@@ -44,12 +44,9 @@ resource "aws_security_group" "dev_proj_sg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-```
 
-# Jenkins default port 
-```
   ingress {
-    description = "Jenkins GUI Access"
+    description = "Jenkins GUI Access"      // Jenkins default port 
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
