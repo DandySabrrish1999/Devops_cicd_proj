@@ -58,6 +58,10 @@ So the resources required to create a EC2 instance
 - Instance type= t2.micro
 - Key\_name= devops\_proj\_udemey
 - Subnet\_id= subnet-08e16549a1b912fb1
+- When you have too mnay instances to stop or start you can use this you have to give the ids of your instances created
+```
+aws ec2 start-instances --instance-ids i-0af******* i-027511****** i-06d769a*****
+```
 ```
 resource "aws\_instance" "demo-server" {
 
