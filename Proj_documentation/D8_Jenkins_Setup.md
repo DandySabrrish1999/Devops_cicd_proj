@@ -6,7 +6,7 @@
    - Click on system
    - Click on Global credentials (unrestricted)
    - Click on Add credentials
-   - 
+   - Kind: ``` Ssh username with private key ```
 
 
 
