@@ -1,1 +1,10 @@
+# Integrating Git_hub with Jenkins
 
+## Cloning the repo to our local system
+
+1. Make sure github & gitbash is installed in your local system
+2. Copy the code url and open gitbash within your folder you want to clone the code
+```
+## My url
+https://github.com/DandySabrrish1999/ttrend.git
+```
