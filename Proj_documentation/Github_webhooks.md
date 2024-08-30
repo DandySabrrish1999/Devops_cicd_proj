@@ -18,8 +18,7 @@
     - ```JENKINS_URL/multibranch-webhook-trigger/invoke?token=[Trigger token]```
     - ```JENKINS_URL:http://52.91.60.94:8080```
     - ```[Trigger token]:devops_udemy_webhook_token```
-    - ```http://52.91.60.94:8080/multibranch-webhook-trigger/invoke 
-          token=devops_udemy_webhook_token```
+    - ```http://52.91.60.94:8080/multibranch-webhook-trigger/invoke token=devops_udemy_webhook_token```
 10. Go to GitHub repo where you're working on ```DandySabrrish1999/ttrend```
     - Click on ```settings``` of the repo you can find it on the title bar of the repo where you have options like code,actions and all that and not the whole github profile settings
     - Click on ```webhooks```
