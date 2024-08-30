@@ -2,6 +2,15 @@
 
  
 ## Installing Plugins in Jenkins
+1. Install ```multibranch scan webhook trigger``` plugin
+   - Jenkins dashboard
+   - manage jenkins
+   - manage plugins
+   - Available Plugins
+   - Search for ```Multibranch Scan webhook Trigger```
+   - Install it
+
+## Configuring the Webhook
 1. Login to your jenkins dashboard
 2. Go to the current pipeline your working on
     - ```ttrend_multibranch_pipeline```
