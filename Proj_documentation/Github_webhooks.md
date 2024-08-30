@@ -19,7 +19,8 @@
     - ```JENKINS_URL:http://52.91.60.94:8080```
     - ```[Trigger token]:devops_udemy_webhook_token```
     - ```http://52.91.60.94:8080/multibranch-webhook-trigger/invoke token=devops_udemy_webhook_token```
-10. Go to GitHub repo where you're working on ```DandySabrrish1999/ttrend```
+    - Click on ```Save``` and ```apply```
+10. Go to ```GitHub``` repo where you're working on ```DandySabrrish1999/ttrend```
     - Click on ```settings``` of the repo you can find it on the title bar of the repo where you have options like code,actions and all that and not the whole github profile settings
     - Click on ```webhooks```
     - Click on ``` Add webhook```
@@ -27,5 +28,7 @@
                         token=devops_udemy_webhook_token```
     - Content Type: ``` application/json```
     - Which events would you like to trigger this webhook?:```Just the push event```
+    - Click on ```Add Webhook```
+11. We have successfully configured the webhook according to our requirements
 
 
