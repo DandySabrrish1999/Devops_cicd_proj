@@ -39,5 +39,7 @@
     - Which events would you like to trigger this webhook?:```Just the push event```
     - Click on ```Add Webhook```
 11. We have successfully configured the webhook according to our requirements
+    - Now make changes in the pipeline job and push the changes see if its working
+      or not
 
 
