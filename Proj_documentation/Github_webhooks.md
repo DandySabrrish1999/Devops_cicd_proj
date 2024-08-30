@@ -15,7 +15,7 @@
     - ```Trigger token:devops_udemy_webhook_token```
     - Click on ```?``` which is right next to ```Trigger token```
     - There will be a message giving the URL of the webhooks
-    - ```JENKINS_URL/multibranch-webhook-trigger/invoke?token=[Trigger token]```
+    - JENKINS_URL/multibranch-webhook-trigger/invoke?token=[Trigger token]
     - ```JENKINS_URL:http://52.91.60.94:8080```
     - ```[Trigger token]:devops_udemy_webhook_token```
     - ```http://52.91.60.94:8080/multibranch-webhook-trigger/invoke 
