@@ -10,7 +10,7 @@
     - Go to ```Manage Jenkins```
     - Click on ```Credentials```
     - Under ```Stores scoped to Jenkins``` 
-    - click ```System```
+    - click ```System``` 
     - click ```Global Credential``` and ```add credentials```
     - kind: ```Secret text```
     - Secret: ``` Add the token generated above in 4 ```
