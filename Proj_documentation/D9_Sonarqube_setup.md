@@ -15,4 +15,17 @@
     - kind: ```Secret text```
     - Secret: ``` Add the token generated above in 4 ```
     - ID: ```SonarQube_key``` and click ``` Create```
-    - 
+
+
+   ## Configuring SonarQube in Jenkins
+1. Go to jenkins dashboard
+2. Click on ```Manage Jenkins```
+3. click on ```Plugin Manager```
+4. Search for ```SonarQube Scanner``` and install
+5. Go to ```Manage Jenkins```
+6. Under ```System Configuration``` click on ```System```
+7. Scroll down you can find ```SonarQube Server```
+8. Click on ```Add Sonarqube```
+   - Name: ```SonarQube_Server_devopsudemy```
+   - Server URL: ```https://sonarcloud.io/```
+   - Server Aunth Token: ```SonarQube_key```
