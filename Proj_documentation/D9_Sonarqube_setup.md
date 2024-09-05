@@ -29,3 +29,13 @@
    - Name: ```SonarQube_Server_devopsudemy```
    - Server URL: ```https://sonarcloud.io/```
    - Server Aunth Token: ```SonarQube_key```
+   - click ```apply``` and ```save```
+
+## Configuring Sonarscanner in Jenkins
+1. Go to jenkins dashboard
+2. Click on ```Manage Jenkins```
+3. Go to ```Global tool cofiguration
+4. Under ```SonarQube Scanner``` click on ```Add SonarQube Scanner```
+5. Name: ```SonarScanner_devopsudemy```
+6. Make sure you [x] Install automatically option
+7. 
