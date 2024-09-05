@@ -37,5 +37,5 @@
 3. Go to ```Global tool cofiguration
 4. Under ```SonarQube Scanner``` click on ```Add SonarQube Scanner```
 5. Name: ```SonarScanner_devopsudemy```
-6. Make sure you [x] Install automatically option
+6. - [x] Install automatically option
 7. 
