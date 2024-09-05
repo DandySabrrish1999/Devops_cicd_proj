@@ -1,4 +1,4 @@
-# Integration & Setup of SonarQube
+# Integration & Setup of SonarQube with Jenkins
 
 1. We will be integrating SonarQube and Jenkins
 2. We have to create a sonarqube account ```https://sonarcloud.io/```
@@ -18,6 +18,7 @@
 
 
    ## Configuring SonarQube in Jenkins
+   
 1. Go to jenkins dashboard
 2. Click on ```Manage Jenkins```
 3. click on ```Plugin Manager```
@@ -32,10 +33,11 @@
    - click ```apply``` and ```save```
 
 ## Configuring Sonarscanner in Jenkins
+
 1. Go to jenkins dashboard
 2. Click on ```Manage Jenkins```
 3. Go to ```Global tool cofiguration
 4. Under ```SonarQube Scanner``` click on ```Add SonarQube Scanner```
 5. Name: ```SonarScanner_devopsudemy```
-6. - [x] Install automatically option
-7. 
+6. - [x] Install automatically option,make sure you select it
+7.  click ```apply``` and ```save```
