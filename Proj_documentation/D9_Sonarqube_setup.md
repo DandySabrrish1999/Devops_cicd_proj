@@ -36,7 +36,7 @@
 
 1. Go to jenkins dashboard
 2. Click on ```Manage Jenkins```
-3. Go to ```Global tool cofiguration
+3. Go to ```Global tool cofiguration```
 4. Under ```SonarQube Scanner``` click on ```Add SonarQube Scanner```
 5. Name: ```SonarScanner_devopsudemy```
 6. - [x] Install automatically option,make sure you select it
