@@ -49,7 +49,7 @@ Password: Paste the token generated in Jfrog
 Give required description's
 ```
 
-### 3.2 Adding Plugin to Jenkins
+### Adding Plugin to Jenkins
 - Dashboard Jenkins
 - Manage Jenkins
 - Plugins
