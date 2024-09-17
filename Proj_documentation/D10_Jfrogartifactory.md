@@ -49,19 +49,15 @@ Password: Paste the token generated in Jfrog
 Give required description's
 ```
 
-### Adding Plugin to Jenkins
+### Installing artifactory plugin to Jenkins
 - Dashboard Jenkins
 - Manage Jenkins
 - Plugins
 - Available Plugin : ```Artifactory```
 - Install the Plugin
 
+## 4.Updating jenkins file with JAR stage
 
-
-## 4. Add Setup the environemnt in jenkins
-- Username and password
-- Installing artifactory plugin
-- Updating jenkins file with JAR stage
   
 ## 5. Creation of Docker file
 - Creation and publishing of docker image on artifactory 
