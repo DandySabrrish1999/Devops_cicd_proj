@@ -44,6 +44,7 @@ Username: Keep the emailid registered for Jfrog
 - System --> global credentials
 - Add Credentials
 ```
+ID: Jfrog_Jenkins_Token
 Username: Email-id used for jfrog registration
 Password: Paste the token generated in Jfrog
 Give required description's
@@ -57,6 +58,8 @@ Give required description's
 - Install the Plugin
 
 ## 4.Updating jenkins file with JAR stage
+- referring from docs [https://jfrog.com/help/r/jfrog-integrations-documentation/working-with-pipeline-jobs-in-jenkins]
+- we go with scrippted 
 
   
 ## 5. Creation of Docker file
