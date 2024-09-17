@@ -1,6 +1,6 @@
 # Jfrog Artifactory setup
 
-1. What is Jfrog artifactory?  [https://jfrog.com/artifactory/]
+1. What is Jfrog artifactory?  [Ref: https://jfrog.com/artifactory/]
 
 - JFrog Artifactory is like a warehouse for software components. Imagine you're building something out of LEGO blocks (in this case, software), and you need a place to store, organize, and retrieve those blocks whenever needed. Artifactory acts as a central location where developers store their software packages (like code libraries, dependencies, or even full applications), and it makes it easier to manage, track versions, and share them with other developers. It supports many different types of packages, like Docker images, Java, Python, etc.
 
