@@ -26,6 +26,28 @@ Cloud region: US East(N.Virginia)    ## Location whereever is your VM's running
 
 
 ## Generate access token with username
+![image](https://github.com/user-attachments/assets/7cec6bca-5c37-470d-a014-59ee9012cf26)
+- Click on Administration
+- User managememnt --> Access token --> Generate token
+```
+Description:jfrog_jenkins_devopsudemytoken
+Username: Keep the emailid registered for Jfrog
+```
+- Click on generate token and paste it in the notepad
+
+### Adding token in jenkins
+- Go to Jenkins dashboard
+- Manage Jenkins
+- Credentials
+- Under stores scoped to Jenkins
+- System --> global credentials
+- Add Credentials
+```
+Username: Email-id used for jfrog registration
+Password: Paste the token generated in Jfrog
+Give required description's
+```
+
 ## Add Setup the environemnt in jenkins
 - Username and password
 - Installing artifactory plugin
