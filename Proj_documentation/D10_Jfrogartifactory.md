@@ -98,7 +98,9 @@ cd /home/ubuntu/jenkins/workspace/ttrend_multibranch_pipeline_main/jarstaging/co
             }
         }   
     }
-- After making the necessary changes we have to commit the file 
+- After making the necessary changes we have to commit the file we have to commit and push the file to the Git repo
+- Then go to the location where i mentioned in the above screenshot the target space in your Jfrog
+```maven_projudemy-libs-release-local``` where you can find the JAR file being dumped over there now we did this because we are actually contenrising the whole thing in docker let's see how to execute.
 
   
 ## 5. Creation of Docker file
