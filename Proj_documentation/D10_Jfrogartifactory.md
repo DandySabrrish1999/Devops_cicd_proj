@@ -17,6 +17,11 @@ hostname:devopsudemy
 Host Platform: aws
 Cloud region: US East(N.Virginia)    ## Location whereever is your VM's running
 ```
+- There will be a window where it pop-ups for packages (or) in the welcome screen
+![image](https://github.com/user-attachments/assets/e2b19521-4981-4982-a0ba-e157fe19ebdb)
+- Click on Maven and the name as it used in the coming days just copy paste the link generated
+- Click on Articatory--> Artifacts (To check whether the maven packages are installed or not)
+
 
 3. Generate access token with username
 4. Add Setup the environemnt in jenkins
