@@ -53,7 +53,7 @@ Give required description's
 - Dashboard Jenkins
 - Manage Jenkins
 - Plugins
-- Available Plugin : Artifactory
+- Available Plugin : ```Artifactory```
 - Install the Plugin
 
 
