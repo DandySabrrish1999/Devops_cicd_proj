@@ -59,7 +59,35 @@ Give required description's
 
 ## 4.Updating jenkins file with JAR stage
 - referring from docs [https://jfrog.com/help/r/jfrog-integrations-documentation/working-with-pipeline-jobs-in-jenkins]
-- we go with scrippted 
+- we go with scrippted pipeline
+```
+     def registry = 'https://devopsudemy.jfrog.io'  ## This def goes right on the starting of your code and replace it with your designated URL  
+
+         stage("Jar Publish") {
+        steps {
+            script {
+                    echo '<--------------- Jar Publish Started --------------->'
+                     def server = Artifactory.newServer url:registry+"/artifactory" credentialsId:"Jfrog_Jenkins_Token"   ## credentialsId too have to change with the token id you sepcified in jenkins credentials created in the above steps
+                     def properties = "buildid=${env.BUILD_ID},commitid=${GIT_COMMIT}";
+                     def uploadSpec = """{
+                          "files": [
+                            {
+                              "pattern": "jarstaging/(*)",
+                              "target": "maven_projudemy-libs-release-local/{1}",    ## replace with your target name will attach a screenshot to where to find
+                              "flat": "false",
+                              "props" : "${properties}",
+                              "exclusions": [ "*.sha1", "*.md5"]
+                            }
+                         ]
+                     }"""
+                     def buildInfo = server.upload(uploadSpec)
+                     buildInfo.env.collect()
+                     server.publishBuildInfo(buildInfo)
+                     echo '<--------------- Jar Publish Ended --------------->'  
+            
+            }
+        }   
+    }   
 
   
 ## 5. Creation of Docker file
