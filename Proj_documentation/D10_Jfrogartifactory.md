@@ -1,6 +1,6 @@
 # Jfrog Artifactory setup
 
-## What is Jfrog artifactory?  
+## 1. What is Jfrog artifactory?  
 [Ref: https://jfrog.com/]-->products-->Jfrog artifactory
 
 - JFrog Artifactory is like a warehouse for software components. Imagine you're building something out of LEGO blocks (in this case, software), and you need a place to store, organize, and retrieve those blocks whenever needed. Artifactory acts as a central location where developers store their software packages (like code libraries, dependencies, or even full applications), and it makes it easier to manage, track versions, and share them with other developers. It supports many different types of packages, like Docker images, Java, Python, etc.
@@ -9,7 +9,7 @@
 
 
 
-## Creation of Artifactory account
+## 2. Creation of Artifactory account
 - Go to --> [Ref: https://jfrog.com/]
 - Products-->Jfrog Artifcatory--> Start a trail [https://jfrog.com/start-free/]  ### The link should look like this if not its just giving the readonly version of Jfrog if your facing a issue use the above link 
 - Give the basic details email and all those
@@ -25,7 +25,7 @@ Cloud region: US East(N.Virginia)    ## Location whereever is your VM's running
 - Click on Articatory--> Artifacts (To check whether the maven packages are installed or not)
 
 
-## Generate access token with username
+## 3. Generate access token with username
 ![image](https://github.com/user-attachments/assets/7cec6bca-5c37-470d-a014-59ee9012cf26)
 - Click on Administration
 - User managememnt --> Access token --> Generate token
@@ -36,7 +36,7 @@ Username: Keep the emailid registered for Jfrog
 - Click on generate token and paste it in the notepad
 
 
-### Adding token in Jenkins
+### 3.1 Adding token in Jenkins
 - Go to Jenkins dashboard
 - Manage Jenkins
 - Credentials
@@ -49,7 +49,7 @@ Password: Paste the token generated in Jfrog
 Give required description's
 ```
 
-### Adding Plugin to Jenkins
+### 3.2 Adding Plugin to Jenkins
 - Dashboard Jenkins
 - Manage Jenkins
 - Plugins
@@ -58,10 +58,10 @@ Give required description's
 
 
 
-## Add Setup the environemnt in jenkins
+## 4. Add Setup the environemnt in jenkins
 - Username and password
 - Installing artifactory plugin
 - Updating jenkins file with JAR stage
   
-## Creation of Docker file
+## 5. Creation of Docker file
 - Creation and publishing of docker image on artifactory 
