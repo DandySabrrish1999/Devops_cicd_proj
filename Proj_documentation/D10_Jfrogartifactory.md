@@ -57,9 +57,16 @@ Give required description's
 - Available Plugin : ```Artifactory```
 - Install the Plugin
 
-## 4.Updating jenkins file with JAR stage
+## 4.Updating Jenkins file with JAR stage
+- Go this directory in you Jenkins_Master system
+```
+cd /home/ubuntu/jenkins/workspace/ttrend_multibranch_pipeline_main/jarstaging/com/valaxy/demo-workshop
+```
+- Where you can find the present working JAR file and the version of it
 - referring from docs [https://jfrog.com/help/r/jfrog-integrations-documentation/working-with-pipeline-jobs-in-jenkins]
 - we go with scrippted pipeline
+- ![image](https://github.com/user-attachments/assets/0ba38267-2474-40d1-9b19-70c1aab67284)
+
 ```
      def registry = 'https://devopsudemy.jfrog.io'  ## This def goes right on the starting of your code and replace it with your designated URL  
 
@@ -67,13 +74,13 @@ Give required description's
         steps {
             script {
                     echo '<--------------- Jar Publish Started --------------->'
-                     def server = Artifactory.newServer url:registry+"/artifactory" credentialsId:"Jfrog_Jenkins_Token"   ## credentialsId too have to change with the token id you sepcified in jenkins credentials created in the above steps
+                     def server = Artifactory.newServer url:registry+"/artifactory" credentialsId:"Jfrog_Jenkins_Token"   ## ```credentialsId``` too have to change with the token id you sepcified in jenkins credentials created in the above steps
                      def properties = "buildid=${env.BUILD_ID},commitid=${GIT_COMMIT}";
                      def uploadSpec = """{
                           "files": [
                             {
                               "pattern": "jarstaging/(*)",
-                              "target": "maven_projudemy-libs-release-local/{1}",    ## replace with your target name will attach a screenshot to where to find
+                              "target": "maven_projudemy-libs-release-local/{1}",    ## replace with your target name will attach a screenshot above where to find
                               "flat": "false",
                               "props" : "${properties}",
                               "exclusions": [ "*.sha1", "*.md5"]
@@ -87,7 +94,8 @@ Give required description's
             
             }
         }   
-    }   
+    }
+- 
 
   
 ## 5. Creation of Docker file
