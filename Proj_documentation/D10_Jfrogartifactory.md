@@ -66,7 +66,10 @@ cd /home/ubuntu/jenkins/workspace/ttrend_multibranch_pipeline_main/jarstaging/co
 - referring from docs [https://jfrog.com/help/r/jfrog-integrations-documentation/working-with-pipeline-jobs-in-jenkins]
 - we go with scrippted pipeline
 - ![image](https://github.com/user-attachments/assets/0ba38267-2474-40d1-9b19-70c1aab67284)
-
+- Variables to change in the below Jenkins file
+  def registry
+  credentialsID
+  target
 ```
      def registry = 'https://devopsudemy.jfrog.io'  ## This def goes right on the starting of your code and replace it with your designated URL  
 
@@ -74,7 +77,7 @@ cd /home/ubuntu/jenkins/workspace/ttrend_multibranch_pipeline_main/jarstaging/co
         steps {
             script {
                     echo '<--------------- Jar Publish Started --------------->'
-                     def server = Artifactory.newServer url:registry+"/artifactory" credentialsId:"Jfrog_Jenkins_Token"   ## ```credentialsId``` too have to change with the token id you sepcified in jenkins credentials created in the above steps
+                     def server = Artifactory.newServer url:registry+"/artifactory" credentialsId:"Jfrog_Jenkins_Token"   ## [credentialsId]too have to change with the token id you sepcified in jenkins credentials created in the above steps
                      def properties = "buildid=${env.BUILD_ID},commitid=${GIT_COMMIT}";
                      def uploadSpec = """{
                           "files": [
@@ -95,7 +98,7 @@ cd /home/ubuntu/jenkins/workspace/ttrend_multibranch_pipeline_main/jarstaging/co
             }
         }   
     }
-- 
+- After making the necessary changes we have to commit the file 
 
   
 ## 5. Creation of Docker file
