@@ -35,7 +35,8 @@ Username: Keep the emailid registered for Jfrog
 ```
 - Click on generate token and paste it in the notepad
 
-### Adding token in jenkins
+
+### Adding token in Jenkins
 - Go to Jenkins dashboard
 - Manage Jenkins
 - Credentials
@@ -47,6 +48,15 @@ Username: Email-id used for jfrog registration
 Password: Paste the token generated in Jfrog
 Give required description's
 ```
+
+### Adding Plugin to Jenkins
+- Dashboard Jenkins
+- Manage Jenkins
+- Plugins
+- Available Plugin : Artifactory
+- Install the Plugin
+
+
 
 ## Add Setup the environemnt in jenkins
 - Username and password
