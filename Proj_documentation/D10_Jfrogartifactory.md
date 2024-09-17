@@ -7,6 +7,7 @@
 - It has two types either you can install in VM directly or get a cloud based. I'm going with cloud based as it is more convieneint and its the practice widely used in corp sector
 
 
+
 2. Creation of Artifactory account
 - Go to --> [Ref: https://jfrog.com/]
 - Products-->Jfrog Artifcatory--> Start a trail [https://jfrog.com/start-free/]  ### The link should look like this if not its just giving the readonly version of Jfrog if your facing a issue use the above link 
