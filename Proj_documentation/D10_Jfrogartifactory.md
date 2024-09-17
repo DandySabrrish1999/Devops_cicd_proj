@@ -67,9 +67,9 @@ cd /home/ubuntu/jenkins/workspace/ttrend_multibranch_pipeline_main/jarstaging/co
 - we go with scrippted pipeline
 - ![image](https://github.com/user-attachments/assets/0ba38267-2474-40d1-9b19-70c1aab67284)
 - Variables to change in the below Jenkins file
-  def registry
-  credentialsID
-  target
+  - def registry
+  - credentialsID
+  - target
 ```
      def registry = 'https://devopsudemy.jfrog.io'  ## This def goes right on the starting of your code and replace it with your designated URL  
 
