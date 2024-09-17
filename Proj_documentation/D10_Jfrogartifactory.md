@@ -36,7 +36,7 @@ Username: Keep the emailid registered for Jfrog
 - Click on generate token and paste it in the notepad
 
 
-### 3.1 Adding token in Jenkins
+### Adding token in Jenkins
 - Go to Jenkins dashboard
 - Manage Jenkins
 - Credentials
