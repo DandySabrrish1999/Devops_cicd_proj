@@ -9,6 +9,11 @@
 
 
 
+
+
+
+
+
 ## 2. Creation of Artifactory account
 - Go to --> [Ref: https://jfrog.com/]
 - Products-->Jfrog Artifcatory--> Start a trail [https://jfrog.com/start-free/]  ### The link should look like this if not its just giving the readonly version of Jfrog if your facing a issue use the above link 
@@ -21,8 +26,12 @@ Cloud region: US East(N.Virginia)    ## Location whereever is your VM's running
 ```
 - There will be a window where it pop-ups for packages (or) in the welcome screen
 ![image](https://github.com/user-attachments/assets/e2b19521-4981-4982-a0ba-e157fe19ebdb)
-- Click on Maven and the name as it used in the coming days just copy paste the link generated
+- Click on Maven and the name as it used in the coming days just copy paste the link generated,so here we are using Maven repository in Jfrog
 - Click on Articatory--> Artifacts (To check whether the maven packages are installed or not)
+
+
+
+
 
 
 ## 3. Generate access token with username
@@ -56,6 +65,11 @@ Give required description's
 - Plugins
 - Available Plugin : ```Artifactory```
 - Install the Plugin
+
+
+
+
+
 
 ## 4.Updating Jenkins file with JAR stage
 - Go this directory in you Jenkins_Master system
