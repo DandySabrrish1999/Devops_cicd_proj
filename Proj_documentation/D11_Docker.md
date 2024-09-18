@@ -68,6 +68,7 @@ You start with a base environment that has Java 8 installed.
 You copy your application’s .jar file (which is your Java app) into the container and rename it.
 When the container starts, it runs your Java application using the java -jar command.
 ```
+- Now we push the docker file using gitbash from local and check the branch if its successfully executed or not
 - 
 
 
