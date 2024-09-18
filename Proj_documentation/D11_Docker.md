@@ -9,9 +9,42 @@ Imagine you want to move your furniture from one house to another. If you just t
 
 Similarly, Docker packages an application and its dependencies into a container, so it runs smoothly no matter where it's deployed, without worrying about the underlying system.
 
+## 2.Installing Docker in Jenkins-Slave machine using ansible machine
+
+- Get to the Ansible system where we created a playbook to install maven ```ansible_jenkins_slave_setup.yaml```
+- I have created a new setup file ```ansible_jenkins_slave_setup2.yaml```.So it's the same script we add a task to install docker and start the service
+- You can attach the below code to your existing file or create a new file copying the existing code
+  
+```
+# Installing Docker in the Slave 2 system
+  - name: Install docker
+    apt:
+      name: docker.io
+      state: present
+
+# Starting the Docker service
+  - name: Starting the service
+    service:
+      name: docker
+      state: started
+```
+- run the above playbook
+```
+ansible-playbook -i hosts ansible_jenkins_slave_setup2.yaml --check  ## To dry run the playbook
+ansible-playbook -i hosts ansible_jenkins_slave_setup2.yaml          ## To run the playbook
+```
 
 
 
+
+### Docker File
+
+
+```
+FROM openjdk:8
+ADD jarstaging/com/valaxy/demo-workshop/2.1.2/demo-workshop-2.1.2.jar ttrend.jar
+ENTRYPOINT [ "java", "-jar","ttrend.jar" ]
+```
 
 
 - Creation and publishing of docker image on artifactory 
