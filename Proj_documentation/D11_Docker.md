@@ -13,7 +13,7 @@ Similarly, Docker packages an application and its dependencies into a container,
 
 - Get to the Ansible system where we created a playbook to install maven ```ansible_jenkins_slave_setup.yaml```
 - I have created a new setup file ```ansible_jenkins_slave_setup2.yaml```.So it's the same script we add a task to install docker and start the service
-- You can attach the below code to your existing file or create a new file copying the existing code
+- You can attach the below code to your existing file or create a new file copying the existing code and its case sensitive else it wont work.
   
 ```
 # Installing Docker in the Slave 2 system
@@ -28,13 +28,16 @@ Similarly, Docker packages an application and its dependencies into a container,
       name: docker
       state: started
 ```
-- run the above playbook
+- Run the above playbook
 ```
 ansible-playbook -i hosts ansible_jenkins_slave_setup2.yaml --check  ## To dry run the playbook
 ansible-playbook -i hosts ansible_jenkins_slave_setup2.yaml          ## To run the playbook
 ```
-
-
+- Go to your slave system and check whether docker is installed or not
+```
+service docker status             ## Check the status of docker
+```
+- 
 
 
 ### Docker File
