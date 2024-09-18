@@ -37,17 +37,40 @@ ansible-playbook -i hosts ansible_jenkins_slave_setup2.yaml          ## To run t
 ```
 service docker status             ## Check the status of docker
 ```
-- 
-
 
 ### Docker File
-
-
+- We crete a ```dockerfile``` in the ttrend proj environment where we have created our sonar file and jenkins file
+  
 ```
 FROM openjdk:8
 ADD jarstaging/com/valaxy/demo-workshop/2.1.2/demo-workshop-2.1.2.jar ttrend.jar
 ENTRYPOINT [ "java", "-jar","ttrend.jar" ]
+
+
+## Description of the above snippet of the code
+1. FROM openjdk:8
+This line tells Docker to start with a pre-made base image that includes OpenJDK 8. OpenJDK is the free and open-source implementation of Java, so this means you’re starting with a basic environment that already has Java 8 installed. You need Java to run your application.
+Think of it like you're starting with a computer that already has Java set up and ready to use.
+
+2. ADD jarstaging/com/valaxy/demo-workshop/2.1.2/demo-workshop-2.1.2.jar ttrend.jar
+The ADD command is like copying a file into your Docker image. Here, you’re taking a file named demo-workshop-2.1.2.jar from a directory inside your project (jarstaging/com/valaxy/demo-workshop/2.1.2/) and adding it to the container. Once added, it will be renamed as ttrend.jar inside the container.
+In simple terms, you're copying your Java application (which is packaged as a .jar file) into the container and renaming it to make it easier to reference later.
+
+3. ENTRYPOINT [ "java", "-jar", "ttrend.jar" ]
+This line specifies the command that should be run when the container starts. In this case, it tells Docker to run the command:
+java: This is the command to run Java programs.
+-jar: This tells Java to run a specific .jar file (which is like a package containing your application).
+ttrend.jar: This is the .jar file (your Java application) that you copied into the container earlier.
+So, when the container starts, it automatically runs your Java application by executing java -jar ttrend.jar.
+
+Overall Summary:
+You start with a base environment that has Java 8 installed.
+You copy your application’s .jar file (which is your Java app) into the container and rename it.
+When the container starts, it runs your Java application using the java -jar command.
 ```
+- 
+
+
 
 
 - Creation and publishing of docker image on artifactory 
