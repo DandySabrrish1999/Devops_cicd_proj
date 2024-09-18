@@ -1,7 +1,7 @@
 ## Setting up docker in salve and Creation of Docker file 
 ![image](https://github.com/user-attachments/assets/9ed3ec86-02f7-464a-a192-725fd85f7cbf)
 
-## 1. Docker
+## 1.What is Docker?
 Docker is a tool that allows you to package and run applications in a lightweight, isolated environment called a container. Think of a container like a box that holds everything an application needs to run, including the code, libraries, and system tools. This makes it easier to run the application anywhere—on your computer, on a server, or in the cloud—without worrying about compatibility or setup issues.
 
 Here’s a simple Example:
