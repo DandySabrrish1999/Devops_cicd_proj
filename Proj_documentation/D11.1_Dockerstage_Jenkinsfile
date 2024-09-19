@@ -1,0 +1,5 @@
+### Adding the Docker stage in Jenkins file 
+
+- Install ```Docker pipeline plugin``` in Jenkins
+- Add the stage code over here from jenkins file
+- 
