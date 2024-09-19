@@ -82,7 +82,3 @@ When the container starts, it runs your Java application using the java -jar com
 - Click on ```Pre-Built Setup```
 - Select ```docker``` and follow the steps
 
-
-
-
-- Creation and publishing of docker image on artifactory 
