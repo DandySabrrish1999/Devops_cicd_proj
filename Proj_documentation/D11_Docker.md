@@ -69,7 +69,18 @@ You copy your application’s .jar file (which is your Java app) into the contai
 When the container starts, it runs your Java application using the java -jar command.
 ```
 - Now we push the docker file using gitbash from local and check the branch if its successfully executed or not
-- 
+
+### Docker repository in Jfrog Artifactory
+- On your JFrog dashboard on the top right under your profile there is a option called ```Quick Repository creation```
+- click on that select ```docker``` and give the name you like
+- My repo name : ```testdocker```
+
+(OR)
+- Go to ```Admninistration``` on the top panel
+- the left hand side you have a option ```Repositories``` its where you get to know the different repositories on your profile
+- On the top right ```Create a Repository```
+- Click on ```Pre-Built Setup```
+- Select ```docker``` and follow the steps
 
 
 
