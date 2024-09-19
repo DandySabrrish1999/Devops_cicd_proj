@@ -27,6 +27,18 @@ Similarly, Docker packages an application and its dependencies into a container,
     service:
       name: docker
       state: started
+
+# Giving Permission
+  - name: give 777 permission on /var/run.docker.sock
+    file:
+      path: /var/run/docker.sock
+      state: file
+      mode: 0777
+
+# Auto starting Docker
+  - name: Restarting the docker service
+    service:
+      name: docker
 ```
 - Run the above playbook
 ```
