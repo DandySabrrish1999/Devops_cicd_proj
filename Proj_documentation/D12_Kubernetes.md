@@ -23,6 +23,7 @@ Kubernetes is like the head manager of all those kitchens:
 Automation: It takes care of things like restarting crashed containers or scaling up when there’s more demand, so you don’t have to manage it all manually.
 Consistency: It ensures your application runs the same way no matter where it’s deployed (on your own servers, in the cloud, etc.).
 Scalability: If your app gets more users, Kubernetes can automatically scale your application to handle the load.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Setting up EKS Cluster 
 
