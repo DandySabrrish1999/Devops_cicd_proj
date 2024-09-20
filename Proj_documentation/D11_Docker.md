@@ -15,7 +15,7 @@ Similarly, Docker packages an application and its dependencies into a container,
 - I have created a new setup file ```ansible_jenkins_slave_setup2.yaml```.So it's the same script we add a task to install docker and start the service
 - You can attach the below code to your existing file or create a new file copying the existing code and its case sensitive else it wont work.
 - After executing the below playbook execute this ```ls -ltr /var/run/docker.sock``` to make sure the required permissions are given.
-- ![image](https://github.com/user-attachments/assets/618acc52-4e5d-4de2-b4ca-c1437c5fb226)
+![image](https://github.com/user-attachments/assets/618acc52-4e5d-4de2-b4ca-c1437c5fb226)
 
   
 ```
