@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/912ff311-6370-4c39-bc5b-8878b400856c)
+
 # Prepare Terraform Environment on Windows
 
 We should be setting up this 
