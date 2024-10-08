@@ -39,4 +39,7 @@ terraform apply --auto-approve
    ```
    cluster public i/p:30082
    ```
- 
+ - Login to your Jenkins_slave (or) build_node
+```
+sudo su - ubuntu
+
