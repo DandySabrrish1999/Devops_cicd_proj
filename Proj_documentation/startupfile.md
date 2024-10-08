@@ -42,4 +42,13 @@ terraform apply --auto-approve
  - Login to your Jenkins_slave (or) build_node
 ```
 sudo su - ubuntu
-
+aws eks update-kubeconfig --region us-east-1 --name devops_udemy_eks01       ## Refer D12.2(3)
+kubectl get ns                                ## Gets all the namespace
+chmod +x deploy.sh                            ## Permissions to execute
+./deploy.sh                                   ## Execute
+kubectl get ns                                ## Get all the namespace 
+kubectl get all -n dev-udemy-namespace        ## Getting all the clusters in the namespace
+```
+- Copy your cluster public i/p:30082
+- Make sure whenever you change the code commit and then push and refresh in order for the changes to affect
+- 
