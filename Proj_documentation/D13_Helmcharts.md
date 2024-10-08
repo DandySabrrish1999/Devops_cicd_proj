@@ -1,3 +1,8 @@
+![image](https://github.com/user-attachments/assets/f7359c3a-5836-4201-a84b-34efe91bedd6)
+
+
+
+
 ## Helm 
 - Helm is a pcakage manager for kubernetes
 - A chart is a package of pre-configured kubernetes resources
