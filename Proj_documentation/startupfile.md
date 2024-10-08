@@ -49,6 +49,7 @@ chmod +x deploy.sh                            ## Permissions to execute
 kubectl get ns                                ## Get all the namespace 
 kubectl get all -n dev-udemy-namespace        ## Getting all the clusters in the namespace
 ```
+- When you commit a code in src from ttrend folder checkout(D12.3) 
 - Copy your cluster public i/p:30082
 - Make sure whenever you change the code commit and then push and refresh in order for the changes to affect
 - 
