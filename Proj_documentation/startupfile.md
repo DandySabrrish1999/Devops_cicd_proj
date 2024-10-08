@@ -28,4 +28,15 @@ terraform apply --auto-approve
    - public i/p:8080
    - Update your public i/p in github-webhooks, if its failing just make sure delete the webhook and recreate the webhook again
 - Update the sg for cluster
+  - Now go to your aws cluster console so change the security group
+   - Go to your  cluster
+   - click on security
+   - click on the remoteAcess security group mentioned out of two
+   - click on Edit inbound rule
+   - click om add rule and follow the below screenshot for inboud rules
+   - ![image](https://github.com/user-attachments/assets/eefdcd37-9e9d-4ae8-ab04-665b4ec30fc3)
+   - add the rule and and now copy the cluster public i/p
+   ```
+   cluster public i/p:30082
+   ```
  
