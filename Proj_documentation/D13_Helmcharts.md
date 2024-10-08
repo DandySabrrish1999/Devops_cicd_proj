@@ -12,8 +12,8 @@
 - Docker Hub is like an online bakery store where you can upload your cake (inside the Docker box) so other people can download it and enjoy the same cake. They don’t need to bake it from scratch because the whole cake (your app) is ready.
 
 **Helm:**
-Now, you don’t just need a cake; you want to set up a full party (like a big app with many pieces).
+- Now, you don’t just need a cake; you want to set up a full party (like a big app with many pieces).
 
 - Helm is like a party planner that organizes everything for you: cake (your Docker app), decorations, drinks, plates, and music (other configurations and services). You don’t have to do all these things one by one—Helm plans the whole party and sets it up.
 
--So, while Docker helps package the cake, Helm helps plan the whole party by organizing everything (including the cake) and setting it up in Kubernetes.
+- So, while Docker helps package the cake, Helm helps plan the whole party by organizing everything (including the cake) and setting it up in Kubernetes.
