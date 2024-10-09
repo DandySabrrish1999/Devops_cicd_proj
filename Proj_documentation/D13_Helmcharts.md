@@ -20,3 +20,14 @@
 - Helm is like a party planner that organizes everything for you: cake (your Docker app), decorations, drinks, plates, and music (other configurations and services). You don’t have to do all these things one by one—Helm plans the whole party and sets it up.
 
 - So, while Docker helps package the cake, Helm helps plan the whole party by organizing everything (including the cake) and setting it up in Kubernetes.
+
+
+### Installation of Helm charts
+- So i have written a automation script to install helm and mysql
+```
+have to paste the ansible playbook
+```
+- To search a repo in helm with mysql : ```helm search repo mysql```
+- To check if its installed or not: ```helm version```
+- To check the repo: ```helm list```
+- 
