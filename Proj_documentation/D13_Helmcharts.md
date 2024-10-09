@@ -31,3 +31,5 @@ have to paste the ansible playbook
 - To check if its installed or not: ```helm version```
 - To check the repo: ```helm list```
 - 
+####
+![image](https://github.com/user-attachments/assets/ffc684f4-5adb-4ec3-bbab-33afcfa337aa)
