@@ -117,6 +117,7 @@ kubectl get all -n dev-udemy-namespace
 
 4. Creating the whole same thing with jenkins deploy job
 - Now we have created and tested if our ttrend manaully now we deploy through jenkins job
+
 4.1
 ```
 kubectl uninstall ttrend-v1
