@@ -148,7 +148,7 @@ helm list
 kubectl get ns
 ```
 
- 
+- The below screenshot shows you how to delete the service and the how to see under the ns
 ####
 ![image](https://github.com/user-attachments/assets/ffc684f4-5adb-4ec3-bbab-33afcfa337aa)
 
