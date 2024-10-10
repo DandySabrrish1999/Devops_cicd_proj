@@ -24,10 +24,130 @@
 
 ### Installation of Helm charts
 
-- To search a repo in helm with mysql : ```helm search repo mysql```
-- To check if its installed or not: ```helm version```
-- To check the repo: ```helm list```
-- To install my
+1. Installing helm
+```
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+```
+
+2. Checking if its installed or not
+```
+helm version             ## To check the version
+helm list                ## To check the repo
+```
+
+3. Configuring .kube/config
+```
+aws eks update-kubeconfig --region us-east-1 --name devops_udemy_eks01
+```
+
+4. Searching for a particular repo and checking if helm is working or not
+```
+helm repo list                                        ## To check the repo
+helm repo add stable https://charts.helm.sh/stable    ## We are a repo called stable
+helm repo update                                    
+helm search repo <helm-chart>                          ## To search a particular repo 
+    - helm search repo stable
+```
+
+
+5. Installation of Mysql charts
+- ```demo-mysql```: You can give any name you wanted to but make sure you rememer moving forward its the same thing we use
+```
+helm install demo-mysql stable/mysql
+helm pull stable/mysql
+tar -xzvf mysql-1.6.9.tgz
+```
+
+
+6. Modification and test
+```
+ls                            ## You can find a folder called mysql
+cd mysql/
+ls
+vi Chart.yaml
+    - Change the version to version: 1.7.0
+vi values.yaml
+    
+ - type: NodePort        ## Change to type to NodePort make sure you follow the same its case sensitive
+   port: 3306
+   nodePort: 32000        ## uncomment this line 
+   # loadBalancerIP:
+
+helm list
+    - helm uninstall ---pod name---       ## If anything is present unistall it
+helm install demo-mysql mysql            ## we run this again becaue to reflect the above made changes and make sure you run this command in home directory sudo su - ubuntu the wokrspace we are working on its just come outside the mysql folder as simple
+
+```
+
+
+
+
+### Working on ceration of ttrend helm chart
+
+1. Creation of  ttrend helm
+```
+helm create ttrend            ## ttrend folder with helm chart defaults
+```
+
+2. Inserting our .yaml k8's configuration files
+```
+ls
+cd ttrend
+cd templates
+ls
+rm -rf *
+sudo su - ubuntu
+ls
+cd /opt/kubernetes
+mv deployment.yaml namespace.yaml secret.yaml service.yaml ttrend/templates
+kubectl get all -n dev-udemy-namespace            ## To get the pods under the ns
+kubectl delete --pod name--- -n dev-udemy-namespace        ## have to delete before we create the same through helm charts
+```
+3. Deploying our ttrend helm
+- helm install ttrend-v1 ttrend
+    - ```ttrend-v1```: Name of your choice
+    - ```ttrend```: Folder where we have modified
+```
+helm install ttrend-v1 ttrend
+kubectl get ns
+kubectl get all -n dev-udemy-namespace 
+```
+
+4. Creating the whole same thing with jenkins deploy job
+- Now we have created and tested if our ttrend manaully now we deploy through jenkins job
+4.1
+```
+kubectl uninstall ttrend-v1
+kubectl get ns
+helm list
+```
+4.2
+```
+## If you already have that folder delete it and put your new folder 
+helm package ttrend                ## This basically creates a zip file of our ttrend folder
+    - ttrend ttrend-0.1.0.tgz       ## This is how it creates
+```
+- Now drag and drop the zip folder form the mobaxterm ui to ttrend folder in our local system
+```
+git status
+git add .
+git commit -m "pushing ttrend zip helm"
+git push origin main
+```
+- Now before pushing  the code just make sure you doble check that we have deleted the pods from the manual creation 
+```
+helm list
+kubectl get ns
+```
+- After successful running of the pipeline go to your slave system
+```
+helm list
+kubectl get ns
+```
+
+ 
 ####
 ![image](https://github.com/user-attachments/assets/ffc684f4-5adb-4ec3-bbab-33afcfa337aa)
 
@@ -37,6 +157,7 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Playbook to install helm and mysql
+- First install it manually and then go to this automation script
 - So i have written a automation script to install helm and mysql
 - Dont foget you have to put this playbook in ansible system
     - ```vi jenkins_slave_helm1.yaml```
