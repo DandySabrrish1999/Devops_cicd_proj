@@ -84,7 +84,7 @@ helm install demo-mysql mysql            ## we run this again becaue to reflect 
 
 
 
-### Working on ceration of ttrend helm chart
+### Working on creation of ttrend helm chart
 
 1. Creation of  ttrend helm
 ```
