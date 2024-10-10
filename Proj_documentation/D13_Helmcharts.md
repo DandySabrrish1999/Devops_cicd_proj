@@ -23,9 +23,25 @@
 
 
 ### Installation of Helm charts
+
+- To search a repo in helm with mysql : ```helm search repo mysql```
+- To check if its installed or not: ```helm version```
+- To check the repo: ```helm list```
+- To install my
+####
+![image](https://github.com/user-attachments/assets/ffc684f4-5adb-4ec3-bbab-33afcfa337aa)
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Playbook to install helm and mysql
 - So i have written a automation script to install helm and mysql
 - Dont foget you have to put this playbook in ansible system
     - ```vi jenkins_slave_helm1.yaml```
+
+
 ```
 ---
 - name: Automate Helm installation and deploy MySQL chart
@@ -94,13 +110,8 @@
       debug:
         msg: "{{ helm_install_output.stdout }}"
 ```
+
+
 - Run the playbook
     - ```ansible-playbook -i hosts jenkins_slave_helm1.yaml --check```  ## For dry-run
     - ```ansible-playbook -i hosts jenkins_slave_helm1.yaml ```  ## To run 
-
-- To search a repo in helm with mysql : ```helm search repo mysql```
-- To check if its installed or not: ```helm version```
-- To check the repo: ```helm list```
-- 
-####
-![image](https://github.com/user-attachments/assets/ffc684f4-5adb-4ec3-bbab-33afcfa337aa)
