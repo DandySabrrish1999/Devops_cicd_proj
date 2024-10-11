@@ -117,6 +117,18 @@ kubectl get all -n dev-udemy-namespace
 
 4. Creating the whole same thing with jenkins deploy job
 - Now we have created and tested if our ttrend manaully now we deploy through jenkins job
+```
+## Eitheir just replace the deploy stage in jenkins with the below one
+ stage(" Deploy ") {
+       steps {
+         script {
+            echo '<--------------- Helm Deploy Started --------------->'
+            sh 'helm install ttrend-v1.0 ttrend-0.1.0.tgz'
+            echo '<--------------- Helm deploy Ends --------------->'
+         }
+       }
+     }
+```
 
 4.1
 ```
