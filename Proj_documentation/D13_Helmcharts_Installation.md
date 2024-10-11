@@ -132,7 +132,7 @@ kubectl get all -n dev-udemy-namespace
 
 4.1
 ```
-kubectl uninstall ttrend-v1
+helm uninstall ttrend-v1
 kubectl get ns
 helm list
 ```
