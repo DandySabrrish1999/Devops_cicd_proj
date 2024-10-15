@@ -74,10 +74,10 @@ kubectl edit svc prometheus-kube-prometheus-prometheus -n monitoring
 
 ```
 kubectl get all -n monitoring
-
+```
 ![image](https://github.com/user-attachments/assets/7a01e541-612a-4a32-b8a5-3e7f68660563)
   - Now its changed to LB from clusterip
-```
+
 
 ## Accessing the Prometheus from AWS console
 - Go to your aws console
