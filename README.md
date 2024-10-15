@@ -1,1 +1,0 @@
-# Devops_cicd_proj
