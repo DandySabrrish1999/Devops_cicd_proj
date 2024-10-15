@@ -1,0 +1,32 @@
+---
+- name: Setting up Jenkins_Slave machine
+  hosts: jenkins-slave
+  become: true
+  tasks:
+
+  # Installing the cache module
+  - name: Ensure apt cache is update
+    apt:
+      update_cache: yes
+
+  # Installing Java on the machine
+  - name: Installing Java
+    apt:                      #apt: this module acts as a root user
+       name: openjdk-11-jdk
+       state: present
+
+
+  # Installing maven packages
+  - name: Installing Maven
+    get_url:                  #get_url: This pmodule is used to extract the url's
+      url: https://dlcdn.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz
+      dest: /opt
+
+  # Extract Packages using unarchive module
+  - name: Extracting the maven packages 
+    unarchive:  #ansible.builtin.unarchive: This module is used to extract the packages
+      src: /opt/apache-maven-3.9.8-bin.tar.gz
+      dest: /opt
+      remote_src: yes           # this means to execute in the remote system
+      
+

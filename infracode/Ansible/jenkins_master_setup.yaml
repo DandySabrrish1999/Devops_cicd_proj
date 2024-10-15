@@ -1,0 +1,47 @@
+---
+- name: Setting up the jenkins Mster node
+  hosts: jenkins-master
+  become: true
+
+  tasks:
+
+    # Getting the apt_repo key
+    - name: Extracting the repo key
+      ansible.builtin.apt_key:
+        name: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+        state: present
+
+    # Adding the Jenkins apt repo 
+
+    - name: Adding jenkins apt repo 
+      ansible.builtin.repo_key:
+        name: 'deb https://pkg.jenkins.io/debian-stable binary/'
+        state: present
+
+    # Installing Java jdk
+
+    - name: install jdk11
+      apt:
+        name: openjdk-11-jdk
+        state: present
+
+    # Installing Jenkins
+
+    - name: Installing Jenkins
+      apt:
+        name: jenkins
+        state: present
+
+    # Starting Jenkins service
+
+    - name: Starting the jenkins service
+      apt:
+        name: jenkins
+        state: present 
+
+    # Restarting jenkins service
+
+    - name: Restart jenkins service
+      apt:
+        name: jenkins
+        service: yes

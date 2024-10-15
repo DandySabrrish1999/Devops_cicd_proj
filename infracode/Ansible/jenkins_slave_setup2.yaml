@@ -1,0 +1,29 @@
+---
+- name: Setting up Jenkins_Slave machine
+  hosts: jenkins-slave
+  become: true
+  tasks:
+
+  # Installing Docker in the Slave 2 system
+  - name: Install docker
+    apt:
+      name: docker.io           # To install docker
+      state: Present            # Error faced because it is case sensitive
+    
+  # Starting the Docker service
+  - name: Starting the service
+    service:
+      name: docker            # To start the docker service
+      state: started
+
+  # Giving Permission
+  - name: give 777 permission on /var/run.docker.sock
+    file:
+      path: /var/run/docker.sock
+      state: file
+      mode: 0777
+
+  # Auto starting Docker
+  - name: Restarting the docker service
+    service:
+      name: docker
