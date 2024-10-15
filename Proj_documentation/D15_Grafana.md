@@ -25,3 +25,42 @@ You can customize your Grafana dashboard to show only the things you care about.
 
 - Alerts:
 Grafana can also be set up to send alerts. For example, if the temperature in one room goes above a certain level or if a security camera goes offline, Grafana will notify you (via email, Slack, or other methods).
+
+
+### Accessing grafana
+```
+kubectl get all -n monitoring
+```
+![image](https://github.com/user-attachments/assets/21a4468a-881e-44b6-9f1e-62768fa402ea)
+- The above is the service will be working on to access
+```
+kubectl edit svc prometheus-grafana -n monitoring
+  - To make necessary changes in prometheus-grafana service
+```
+- ![image](https://github.com/user-attachments/assets/268678c6-8b8a-4087-be90-435a1fb404f6)
+    - have to change from ClusterIP to Loadbalance inorder to access it
+- Go to your aws load balancer console where there will a other LB created
+![image](https://github.com/user-attachments/assets/e88f0b86-b915-4e56-8089-283c62acb542)
+- Copy the DNS and paste it new browser
+- You will be prompted to enter the credentials to acess grafana
+- Even thought if the password is changed you refer to the documentation 
+```
+username: admin
+password: prom-operator
+```
+
+### Wokring with Grafana
+
+![image](https://github.com/user-attachments/assets/1e6aaec0-90ec-463e-b09c-78e637532917)
+  - The above is the grafana UI and on the lefthand side you can see a the dashboard button click on     that and search for USE(Utilization, Saturation, Errors)
+
+- ![image](https://github.com/user-attachments/assets/638829e7-2384-4e3e-a0d8-b3cd238cb884)
+  - Above is the dashboard for utilizations of CPU currently running
+  - ```instance```: This is a filter on top where you can find wrt the i/p address
+- You can check out for other monitoring service
+    - Kubernetes / Compute Resources / Cluster
+    - Kubernetes / API server
+- If you want to create a own dashboard
+    - Click on dashboard
+    - Top right click on new
+    - click on new dashboard
